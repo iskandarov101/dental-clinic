@@ -1,0 +1,86 @@
+.map {
+  position: relative;
+  z-index: 2;
+  padding: 35px 0;
+}
+.map__box {
+  position: absolute;
+  top: 300px;
+  z-index: 1111;
+}
+.map__text-box {
+  text-align: center;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  &::before {
+    content: ":D :P";
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 130px;
+    line-height: 152px;
+    color: rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+  }
+}
+.map__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 5px;
+  max-width: 450px;
+  display: inline-flex;
+  flex-direction: column;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #FFD600;
+    margin: 0 auto 16px;
+  }
+}
+.map__text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+  margin-bottom: 27px;
+  max-width: 900px;
+  margin: 0 auto 15px;
+}
+.map__link {
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.map__img {
+  display: inline-block;
+  vertical-align: middle;
+}
+@include breakpoint-down (1150) {
+  .map__box {
+    top: 275px;
+    left: 0;
+  }
+}
+
+@include breakpoint-down (981) {
+  .map__box {
+    position: relative;
+    top: 0;
+  }
+  .map__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

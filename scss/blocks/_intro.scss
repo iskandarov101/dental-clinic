@@ -1,0 +1,167 @@
+.intro {
+  margin-top: 0px;
+  position: relative;
+  z-index: 4;
+  margin-top: -135px;
+}
+.intro__container {
+  display: flex;
+  align-items: flex-end;
+}
+.intro__list {
+  @include reset-list;
+  display: flex;
+}
+.intro__item {
+  background-color: #FFD600;
+  max-width: 300px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 87px;
+    height: 87px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-bottom: 18px;
+  }
+  &:nth-child(1)::before {
+    background-image: url("../img/intro-item1.png");
+  }
+  &:nth-child(2)::before {
+    background-image: url("../img/intro-item2.png");
+  }
+}
+.intro-card__title {
+  margin: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 4px;
+}
+.intro-card__text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+}
+.intro-appointment {
+  background-color: #0055B8;
+  width: 540px;
+  padding: 30px;
+  border-radius: 5px;
+}
+.intro-appointment__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+  margin-bottom: 29px;
+}
+.intro-appointment__form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.intro-form__name {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 20px 14px;
+  margin-bottom: 12px;
+  outline: none;
+  background-color: transparent;
+  &:focus {
+    background-color: #fff;
+    border-color: #0055B8;
+    color: #0055B8;
+  }
+}
+.intro-form__phone {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 20px 14px;
+  margin-bottom: 12px;
+  outline: none;
+  background-color: transparent;
+  &:focus {
+    background-color: #fff;
+    border-color: #0055B8;
+    color: #0055B8;
+  }
+}
+
+.intro-form__chec {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checbox__text {
+  margin: 0;
+  max-width: 256px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.checked__box {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.checbox__form:checked + .checked__box {
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@include breakpoint-down (1080) {
+  .intro__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@include breakpoint-down (1024) {
+  .intro {
+    margin-top: -220px;
+  }
+}
+@include breakpoint-down (980) {
+  .intro {
+    margin-top: 0;
+  }
+  .intro-card {
+    display: none;
+  }
+  .intro-appointment {
+    width: 100%;
+  }
+}
+@include retina-bg {
+  .intro__item {
+  &:nth-child(1)::before {
+    background-image: url("../img/intro-item1@2x.png");
+  }
+  &:nth-child(2)::before {
+    background-image: url("../img/intro-item2@2x.png");
+  }
+}
+}

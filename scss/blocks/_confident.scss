@@ -1,0 +1,137 @@
+.confident {
+  padding: 35px 0;
+  overflow-x: hidden;
+}
+.confident__wrapper {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 2000px;
+  overflow-x: hidden;
+}
+.confident__img {
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+  margin-left: 50px;
+}
+.confident__text-box {
+  min-width: 800px;
+  &::before {
+    content: ":D :P";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    font-weight: bold;
+    font-size: 130px;
+    line-height: 152px;
+    color: rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+  }
+}
+.confident__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 15px;
+  display: inline-flex;
+  flex-direction: column;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #FFD600;
+    margin: 0 0 16px auto;
+  }
+}
+.confident__text {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+  margin-bottom: 27px;
+}
+.confident-box__info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.confident-info__img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.confident-info__link {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 36px;
+  padding: 24px 85px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0055B8;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@include breakpoint-down (1700) {
+  .confident__img {
+    transform: translateX(100px);
+
+  }
+  .confident__text-box {
+    transform: translateX(100px);
+    min-width: 700px;
+  }
+}
+@include breakpoint-down (1440) {
+  .confident__img {
+    transform: translateX(60px);
+  }
+  .confident__text-box {
+    transform: translateX(70px);
+  }
+}
+@include breakpoint-down (1000) {
+  .confident__wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .confident__img {
+    transform: translateX(0);
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .confident__text-box {
+    min-width: 100%;
+    transform: translateX(0);
+    padding: 0 20px;
+    &::before {
+      left: 0;
+    }
+  }
+  .confident__title {
+  &::before {
+    margin: 0 auto 16px 0;
+  }
+}
+}
+@include breakpoint-down (420) {
+  .confident-box__info {
+    flex-direction: column;
+  }
+  .confident-info__img {
+    margin-bottom: 15px;
+  }
+  .confident-info__link {
+    margin-left: 0;
+  }
+}

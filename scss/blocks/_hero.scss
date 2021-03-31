@@ -1,0 +1,154 @@
+.hero {
+  position: relative;
+  width: 100%;
+}
+.slider-btn__container {
+  position: relative;
+}
+.slider-bnt-wrapper {
+  position: absolute;
+  z-index: 3;
+  left: 20px;
+  top: 500px;
+}
+.slider-info__wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 200px;
+  max-width: 543px;
+}
+
+.slider__list {
+  @include reset-list;
+
+}
+.slider__img {
+  position: relative;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  object-fit: cover;
+}
+.slider__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 10px;
+}
+.slider__title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase;
+  max-width: 540px;
+  margin-bottom: 27px;
+}
+@include breakpoint-down (1080) {
+  .slider-info__container {
+    left: 20px;
+  }
+}
+@include breakpoint-down (1060) {
+  .slider-bnt-wrapper {
+    top: 450px;
+  }
+  .slider-info__wrapper {
+    top: 150px;
+  }
+}
+@include breakpoint-down (1024) {
+  .slider__img {
+    top: 0;
+  }
+  .slider-info__container {
+    padding: 120px 0 0 20px;
+  }
+  .slider-bnt-wrapper {
+    top: 420px;
+  }
+}
+@include breakpoint-down (980) {
+  .slider-bnt-wrapper {
+    top: 350px;
+  }
+  .slider-info__wrapper {
+    padding-right: 20px;
+  }
+  .slider-info__container {
+    position: relative;
+    z-index: 5;
+    left: 0;
+    margin-top: -100px;
+    margin-bottom: 200px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+@include breakpoint-down (850) {
+  .slider-bnt-wrapper {
+    top: 550px;
+  }
+  .slider__img {
+    object-fit: cover;
+    top: 0;
+    bottom: 0;
+  }
+}
+@include breakpoint-down (750) {
+  .slider-bnt-wrapper {
+    top: 500px;
+  }
+}
+@include breakpoint-down (680) {
+  .slider-bnt-wrapper {
+    top: 450px;
+  }
+}
+@include breakpoint-down (620) {
+  .slider-bnt-wrapper {
+    top: 400px;
+  }
+}
+@include breakpoint-down (554) {
+  .slider-bnt-wrapper {
+    top: 350px;
+  }
+  .slider__title {
+    font-size: 30px;
+line-height: 35px;
+  }
+}
+@include breakpoint-down (500) {
+  .slider-bnt-wrapper {
+    top: 300px;
+  }
+}
+@include breakpoint-down (437) {
+  .slider-bnt-wrapper {
+    top: 270px;
+  }
+}
+@include breakpoint-down (400) {
+  .slider-bnt-wrapper {
+    top: 540px;
+  }
+}
+@include breakpoint-down (385) {
+  .slider-bnt-wrapper {
+    top: 500px;
+  }
+}
+@include breakpoint-down (365) {
+  .slider-bnt-wrapper {
+    top: 450px;
+  }
+}
+@include breakpoint-down (335) {
+  .slider-bnt-wrapper {
+    top: 400px;
+  }
+}

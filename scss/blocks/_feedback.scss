@@ -1,0 +1,116 @@
+.feedback {
+  padding: 35px 0;
+}
+.feedback__text-box {
+  text-align: center;
+  position: relative;
+  &::before {
+    content: ":D :P";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 130px;
+    line-height: 152px;
+    color: rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+  }
+}
+.feedback__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 11px;
+  display: inline-flex;
+  flex-direction: column;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background-color: #FFD600;
+    margin: 0 auto 16px;
+  }
+}
+.feedback__text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #4D4D4D;
+  max-width: 500px;
+  margin: 0 auto 35px;
+}
+
+.feedback__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-bottom: 40px;
+}
+.feedback__item {
+  width: 354px;
+}
+.feedback-card__img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 15px;
+  width: 354px;
+}
+.feedback-card__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.feedback-card__text {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.feedback__link-box {
+  display: flex;
+  justify-content: center;
+}
+.feedback__link {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 24px 76px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #4D4D4D;
+  text-decoration: none;
+  border: 2px solid #0055B8;
+  border-radius: 5px;
+  &:hover {
+    background-color: #0055B8;
+    color: #fff;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+@include breakpoint-down (1124) {
+  .feedback__item {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+@include breakpoint-down (763) {
+  .feedback__list {
+    justify-content: center;
+  }
+  .feedback__item {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}

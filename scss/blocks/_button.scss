@@ -1,0 +1,119 @@
+.slider__btn {
+  color: #fff;
+  background-color: #0055B8;
+  border-radius: 5px;
+}
+.global-btn {
+  padding: 24px 115px;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  border: none;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.slider-btn {
+  padding: 35px 25px;
+  border: none;
+  background-color: #FFD600;
+  border-radius: 5px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.next-btn {
+  margin-right: 9px;
+  padding: 35px 18px;
+  background-image: url("../img/arrow-next.svg");
+  background-size: 15px 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.prew-btn {
+  background-image: url("../img/arrow-prew.svg");
+  background-size: 18px 35px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.intro-form__btn {
+  padding: 17px 63px;
+  background-color: #FFD600;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 22px;
+}
+.services__btn--right {
+  background-image: url("../img/services-btn-next.svg");
+}
+.services__btn {
+  padding: 0;
+  display: inline-block;
+  border: 2px solid #0055B8;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 42px;
+  border-radius: 5px;
+  height: 49px;
+  outline: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.services__btn--left {
+  background-image: url("../img/services-btn-prev.svg");
+}
+.team__btn {
+  padding: 0;
+  display: inline-block;
+  border: 2px solid #0055B8;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 42px;
+  border-radius: 5px;
+  height: 49px;
+  outline: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.team__btn--left {
+  background-image: url("../img/services-btn-prev.svg");
+}
+.team__btn--right {
+  background-image: url("../img/services-btn-next.svg");
+}
+@include breakpoint-down (980) {
+  .slider__btn {
+    display: none;
+  }
+}
+@include breakpoint-down (470) {
+  .team__btn {
+    display: none;
+  }
+}
+@include breakpoint-down (400) {
+  .intro-form__btn {
+    width: 100%;
+  }
+  .services__btn {
+    display: none;
+  }
+}

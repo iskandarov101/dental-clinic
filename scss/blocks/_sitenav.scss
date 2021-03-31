@@ -1,0 +1,184 @@
+.header-bottom__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+.navbar__logo {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+  text-decoration: none;
+  display: none;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.navbar__yellow {
+  color: #FFD600;
+}
+.navbar__list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+.navbar__item {
+  margin-right: 35px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.navbar__item-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21px;
+  &:hover {
+    color: #FFD600;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.navbar__social {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+.socila-list__item {
+  margin-right: 13px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.social-list__link {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: baseline;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.social-list__img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+.menu-burger {
+  display: none;
+}
+@include breakpoint-down (1024) {
+  .navbar__logo {
+    display: inline-block;
+  }
+}
+@include breakpoint-down (850) {
+  .navbar__list {
+    display: none;
+  }
+  .navbar__social {
+    display: none;
+  }
+  .menu-burger {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/gamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .navbar-open {
+    overflow-y: auto;
+  }
+  .navbar-open .navbar__list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 77.8px;
+    left: 0;
+    width: 100%;
+    background-color: #0055B8;
+    overflow-y: auto;
+  }
+  .navbar-open .navbar__item {
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-open .navbar__item-link {
+    padding: 24px 0;
+    border: 2px solid #FFD600;
+    width: 100%;
+    display: inline-block;
+    color: #FFD600;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #FFD600;
+      color: #0055B8;
+    }
+  }
+  .navbar-open .navbar__social {
+    display: flex;
+    justify-content: center;
+    padding: 69px 0 32px;
+    position: absolute;
+    top: 441.8px;
+    left: 0;
+    width: 100%;
+    background-color: #0055B8;
+  }
+  .navbar-open .menu-burger {
+    background-image: url("../img/gamburger-close.svg");
+  }
+  .no-js .navbar {
+    flex-direction: column;
+    position: relative;
+    overflow: unset;
+    justify-content: center;
+  }
+  .no-js .menu-burger {
+    display: none;
+  }
+  .no-js .navbar__logo {
+    margin-bottom: 20px;
+  }
+  .no-js .navbar__list {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .no-js .navbar__item {
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .no-js .navbar__item-link {
+    padding: 24px 0;
+    border: 2px solid #FFD600;
+    width: 100%;
+    display: inline-block;
+    color: #FFD600;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #FFD600;
+      color: #0055B8;
+    }
+  }
+  .no-js .navbar__social {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    width: 100%;
+  }
+}
